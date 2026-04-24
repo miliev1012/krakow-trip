@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warsaw Family Trip — May 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─────────────────────────────────────────────────────────────────────────
+       WARSAW FAMILY TRIP — May 2026
+       Playfair Display (serif) + DM Sans (sans)
+       Deep crimson · Amber gold · Forest green · Warm white
+    ───────────────────────────────────────────────────────────────────────── */
+
+    :root {
+      --white:          #ffffff;
+      --off-white:      #faf8f8;
+      --surface:        #ffffff;
+      --bg:             #F7F3F3;
+
+      --crimson:        #8C1A2D;
+      --crimson-deep:   #6A0F1E;
+      --crimson-light:  #B83050;
+      --crimson-pale:   #FDF0F2;
+      --crimson-glow:   rgba(140,26,45,0.14);
+
+      --amber:          #C08A00;
+      --amber-deep:     #8A6000;
+      --amber-pale:     #FEF9E0;
+
+      --forest:         #2D5A3D;
+      --forest-light:   #4A8260;
+      --forest-pale:    #EBF5EE;
+
+      --ink:            #1A1214;
+      --ink-mid:        #3A2830;
+      --muted:          #6E6070;
+      --muted-light:    #9B8898;
+      --border:         #E8DDE0;
+      --border-strong:  #D0B8BC;
+
+      --shadow-xs:   0 1px 3px rgba(80,10,20,0.06);
+      --shadow-sm:   0 2px 8px rgba(80,10,20,0.08), 0 1px 3px rgba(80,10,20,0.04);
+      --shadow-md:   0 4px 20px rgba(80,10,20,0.10), 0 2px 6px rgba(80,10,20,0.05);
+      --shadow-lg:   0 8px 40px rgba(80,10,20,0.12), 0 3px 10px rgba(80,10,20,0.06);
+      --shadow-crimson: 0 4px 20px rgba(140,26,45,0.22), 0 1px 5px rgba(140,26,45,0.10);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ──────────────────────────────────────────────────────────────── */
+    .hero {
+      background: var(--crimson-deep);
+      color: var(--white);
+      padding: 72px 40px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 80% at 100% 0%,   rgba(192,138,0,0.20) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 60% at -10% 100%, rgba(140,26,45,0.5)   0%, transparent 55%),
+        radial-gradient(ellipse 80% 50% at 50%  50%,  rgba(60,0,20,0.30)    0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Subtle diagonal stripe pattern — evokes Polish folk art */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0px, transparent 18px,
+        rgba(255,255,255,0.025) 18px, rgba(255,255,255,0.025) 19px
+      );
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--amber-pale);
+      margin-bottom: 20px;
+      font-weight: 700;
+      border: 1px solid rgba(192,138,0,0.45);
+      padding: 4px 14px;
+      border-radius: 2px;
+      background: rgba(192,138,0,0.10);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 30px rgba(0,0,0,0.25);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--amber-pale);
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-meta span::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--amber-pale);
+      flex-shrink: 0;
+    }
+
+    /* ── NAV TABS ─────────────────────────────────────────────────────────── */
+    .tabs {
+      background: var(--white);
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      overflow-x: auto;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      scrollbar-width: none;
+      box-shadow: 0 2px 12px rgba(80,10,20,0.08);
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      padding: 16px 22px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .tab-btn:hover { color: var(--crimson); background: var(--crimson-pale); }
+    .tab-btn.active { color: var(--crimson-deep); border-bottom-color: var(--crimson); font-weight: 600; }
+
+    /* ── MAIN ─────────────────────────────────────────────────────────────── */
+    .main { max-width: 900px; margin: 0 auto; padding: 44px 20px 96px; }
+
+    /* ── PANELS ───────────────────────────────────────────────────────────── */
+    .panel { display: none; }
+    .panel.active { display: block; animation: fadeUp 0.3s ease; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTION HEADING ──────────────────────────────────────────────────── */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    /* ── OVERVIEW CARDS ───────────────────────────────────────────────────── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .overview-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .overview-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+    .overview-card h4 {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--muted-light);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .overview-card p { font-size: 14px; line-height: 1.6; color: var(--ink); }
+    .overview-card strong { color: var(--crimson-deep); }
+
+    /* ── TIP BOXES ────────────────────────────────────────────────────────── */
+    .tip-box {
+      background: var(--crimson-pale);
+      border: 1px solid rgba(140,26,45,0.18);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      box-shadow: 0 2px 12px rgba(140,26,45,0.07);
+    }
+    .tip-icon { font-size: 22px; flex-shrink: 0; line-height: 1.3; }
+    .tip-content h4 { font-size: 13.5px; font-weight: 600; margin-bottom: 4px; color: var(--ink); }
+    .tip-content p  { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+    .tip-box.amber {
+      background: var(--amber-pale);
+      border-color: rgba(192,138,0,0.25);
+      box-shadow: 0 2px 12px rgba(192,138,0,0.07);
+    }
+    .tip-box.forest {
+      background: var(--forest-pale);
+      border-color: rgba(45,90,61,0.2);
+      box-shadow: 0 2px 12px rgba(45,90,61,0.07);
+    }
+
+    /* ── ACTIVITY CARDS ───────────────────────────────────────────────────── */
+    .activity-list { display: flex; flex-direction: column; gap: 16px; }
+
+    .activity-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: box-shadow 0.22s, border-color 0.22s, transform 0.18s;
+    }
+    .activity-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+
+    .activity-emoji {
+      font-size: 2rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--bg);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--border);
+    }
+
+    .activity-body { flex: 1; min-width: 0; }
+
+    .activity-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .activity-polish {
+      font-size: 11.5px;
+      color: var(--crimson);
+      font-style: italic;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .activity-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .activity-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .tag {
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: 0.2px;
+    }
+    .tag.kids      { background: #fff0f8; color: #b03070; border: 1px solid #f0b8d8; }
+    .tag.outdoor   { background: var(--forest-pale); color: var(--forest); border: 1px solid rgba(45,90,61,0.25); }
+    .tag.indoor    { background: #e8f0fe; color: #3050a0; border: 1px solid #b0c4f0; }
+    .tag.free      { background: var(--forest-pale); color: var(--forest); border: 1px solid rgba(45,90,61,0.25); }
+    .tag.book      { background: var(--crimson-pale); color: var(--crimson-deep); border: 1px solid rgba(140,26,45,0.2); }
+    .tag.highlight { background: var(--amber-pale); color: var(--amber-deep); border: 1px solid rgba(192,138,0,0.3); }
+
+    .activity-info {
+      font-size: 11.5px;
+      color: var(--forest);
+      font-weight: 500;
+    }
+    .activity-warn {
+      font-size: 11.5px;
+      color: var(--crimson-deep);
+      font-weight: 500;
+    }
+    .activity-price {
+      font-size: 11.5px;
+      color: var(--amber-deep);
+      font-weight: 600;
+    }
+
+    /* ── FILTER BAR ───────────────────────────────────────────────────────── */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .filter-btn {
+      font-size: 12.5px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border-strong);
+      background: var(--white);
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      color: var(--muted);
+      transition: all 0.2s;
+      box-shadow: var(--shadow-xs);
+    }
+    .filter-btn:hover  { border-color: var(--crimson); color: var(--crimson); background: var(--crimson-pale); }
+    .filter-btn.active { background: var(--crimson); border-color: var(--crimson); color: var(--white); box-shadow: var(--shadow-crimson); }
+
+    /* ── FOOD CARDS ───────────────────────────────────────────────────────── */
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .food-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
+      border-left: 3px solid var(--crimson);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .food-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .food-card.amber { border-left-color: var(--amber); }
+    .food-card.forest { border-left-color: var(--forest); }
+
+    .food-emoji { font-size: 26px; line-height: 1; }
+    .food-name  { font-weight: 700; font-size: 0.97rem; color: var(--ink); }
+    .food-polish { font-size: 11.5px; color: var(--crimson); font-style: italic; font-weight: 500; }
+    .food-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+    .food-tip   { font-size: 11.5px; color: var(--forest); font-weight: 500; margin-top: 2px; }
+
+    /* ── RESTAURANT CARDS ─────────────────────────────────────────────────── */
+    .restaurant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .restaurant-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .restaurant-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .restaurant-name  { font-weight: 700; font-size: 0.97rem; color: var(--ink); margin-bottom: 4px; }
+    .restaurant-type  { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted-light); margin-bottom: 6px; font-weight: 600; }
+    .restaurant-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.55; margin-bottom: 8px; }
+    .restaurant-stars { color: #e8a020; font-size: 12px; margin-bottom: 4px; }
+    .restaurant-note  { font-size: 11.5px; color: var(--forest); font-weight: 500; }
+
+    /* ── TRANSPORT GRID ───────────────────────────────────────────────────── */
+    .transport-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .transport-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
+      border-top: 3px solid var(--crimson);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .transport-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+    .transport-card.amber { border-top-color: var(--amber); }
+    .transport-card.forest { border-top-color: var(--forest); }
+    .transport-icon  { font-size: 1.8rem; margin-bottom: 10px; line-height: 1; }
+    .transport-title { font-weight: 700; font-size: 0.96rem; margin-bottom: 6px; color: var(--ink); }
+    .transport-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+    .transport-price { font-size: 12px; color: var(--amber-deep); font-weight: 600; margin-top: 8px; }
+
+    /* ── RAINY DAY ────────────────────────────────────────────────────────── */
+    .rain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .rain-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+      border: 1.5px solid var(--border);
+      border-left: 3px solid #7090d0;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .rain-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+    .rain-emoji { font-size: 1.6rem; margin-bottom: 8px; line-height: 1; }
+    .rain-title { font-weight: 700; font-size: 0.96rem; margin-bottom: 5px; color: var(--ink); }
+    .rain-desc  { font-size: 12.5px; color: var(--muted); line-height: 1.55; margin-bottom: 8px; }
+    .rain-note  { font-size: 11.5px; color: var(--forest); font-weight: 500; }
+    .rain-price { font-size: 11.5px; color: var(--amber-deep); font-weight: 600; margin-top: 4px; }
+
+    /* ── SCROLLBAR ────────────────────────────────────────────────────────── */
+    ::-webkit-scrollbar       { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--crimson-light); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero { padding: 44px 20px 40px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-meta { gap: 14px; }
+      .main { padding: 28px 16px 80px; }
+      .tab-btn { padding: 13px 16px; font-size: 12px; }
+      .overview-grid, .food-grid, .restaurant-grid,
+      .transport-grid, .rain-grid { grid-template-columns: 1fr; }
+      .activity-card { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">📍 Warszawa · Poland</div>
+    <h1>Warsaw with the <em>Family</em></h1>
+    <p style="font-size:1.05rem; color:rgba(255,255,255,0.7); max-width:520px; line-height:1.65; margin-top:8px;">
+      Exploring the Polish capital with two adults and a 3-year-old — on foot, metro, tram and bus. No car needed.
+    </p>
+    <div class="hero-meta">
+      <span>May 6 – 11, 2026 · 5 nights</span>
+      <span>Adults × 2 · Toddler 3yo</span>
+      <span>No car — public transport</span>
+      <span>~15–20°C · Possible rain, pack layers</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     TABS
+══════════════════════════════════════════════════════════════════════════ -->
+<div class="tabs" id="tabs">
+  <button class="tab-btn active" onclick="showTab('overview')">🗺 Overview</button>
+  <button class="tab-btn" onclick="showTab('activities')">🎡 Activities</button>
+  <button class="tab-btn" onclick="showTab('parks')">🌿 Parks & Play</button>
+  <button class="tab-btn" onclick="showTab('rainy')">🌧 Rainy Day</button>
+  <button class="tab-btn" onclick="showTab('food')">🍽 Food & Drink</button>
+  <button class="tab-btn" onclick="showTab('transport')">🚌 Getting Around</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════════════════════════════════════ -->
+<div class="main">
+
+  <!-- ── OVERVIEW ─────────────────────────────────────────────────────────── -->
+  <div class="panel active" id="panel-overview">
+    <p class="section-title">Trip at a Glance</p>
+    <p class="section-sub">Warsaw is more family-friendly than its reputation suggests — excellent public transport, beautiful parks, and a rebuilt Old Town that's very walkable with a stroller.</p>
+
+    <div class="overview-grid">
+      <div class="overview-card">
+        <h4>When</h4>
+        <p><strong>May 6–11, 2026</strong><br>5 nights. May is ideal — long days, flowers in bloom, fewer tourists than summer.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Weather</h4>
+        <p>Typically <strong>15–20°C</strong> by day, 8–12°C at night. Spring showers are common — pack a light rain jacket and layers. Sunset around 8:30 pm.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Getting Around</h4>
+        <p>Metro (2 lines), trams, and buses cover everything. Buses and trams have <strong>stroller bays</strong> — no folding required. 72h pass ≈ 36 PLN.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Currency</h4>
+        <p>Polish złoty (<strong>PLN</strong>). As of 2026 ≈ 4.2 PLN = 1 EUR. Cards widely accepted; carry small cash for ice cream and markets.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Language</h4>
+        <p>Polish. English is widely spoken in tourist areas, hotels, and restaurants. Learn a few words — Poles appreciate the effort.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Toddler Rating</h4>
+        <p>Warsaw is <strong>very stroller-friendly</strong>. Łazienki Park, the riverfront, Old Town squares — all excellent for little explorers.</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-icon">🗝</div>
+      <div class="tip-content">
+        <h4>Buy the Warsaw Tourist Card</h4>
+        <p>The 72h City Card (≈ 179 PLN/adult) includes unlimited transport + discounts on major museums. Compare with buying individual tickets — worth it if you plan to visit 3+ paid attractions.</p>
+      </div>
+    </div>
+
+    <div class="tip-box amber">
+      <div class="tip-icon">🧒</div>
+      <div class="tip-content">
+        <h4>Toddler logistics</h4>
+        <p>Most museums offer reduced or free entry under 3 (Warsaw Zoo: 1 PLN under 3!). Łazienki Park has multiple playgrounds. Plan a mid-afternoon nap break — keeps everyone sane. Supermarkets (Biedronka, Żabka) are everywhere for snacks and milk.</p>
+      </div>
+    </div>
+
+    <div class="tip-box forest">
+      <div class="tip-icon">☀️</div>
+      <div class="tip-content">
+        <h4>Best thing about May in Warsaw</h4>
+        <p>Free Chopin piano concerts in Łazienki Park every Sunday (noon & 4 pm) — May 10 falls on a Sunday. The park is full of peacocks, squirrels, and a gorgeous lake-side palace. Don't miss it.</p>
+      </div>
+    </div>
+
+    <!-- Quick useful phrases -->
+    <p class="section-title" style="margin-top:36px;">Useful Polish</p>
+    <p class="section-sub">A few words go a long way with locals.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px;">
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow-xs);">
+        <div style="font-weight:700;color:var(--crimson-deep);font-size:0.95rem;">Dzień dobry</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px;">Good morning / Hello</div>
+      </div>
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow-xs);">
+        <div style="font-weight:700;color:var(--crimson-deep);font-size:0.95rem;">Dziękuję</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px;">Thank you</div>
+      </div>
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow-xs);">
+        <div style="font-weight:700;color:var(--crimson-deep);font-size:0.95rem;">Przepraszam</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px;">Excuse me / Sorry</div>
+      </div>
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow-xs);">
+        <div style="font-weight:700;color:var(--crimson-deep);font-size:0.95rem;">Poproszę</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px;">Please / I'd like…</div>
+      </div>
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow-xs);">
+        <div style="font-weight:700;color:var(--crimson-deep);font-size:0.95rem;">Smacznego!</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px;">Enjoy your meal!</div>
+      </div>
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow-xs);">
+        <div style="font-weight:700;color:var(--crimson-deep);font-size:0.95rem;">Gdzie jest…?</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:3px;">Where is…?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ACTIVITIES ──────────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-activities">
+    <p class="section-title">Must-See Attractions</p>
+    <p class="section-sub">The big sights — all reachable by metro, tram or bus. Each one rated for 3-year-old engagement.</p>
+
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" onclick="filterActivities('all', this)">All</button>
+      <button class="filter-btn" onclick="filterActivities('kids', this)">👶 Great for toddlers</button>
+      <button class="filter-btn" onclick="filterActivities('outdoor', this)">🌿 Outdoor</button>
+      <button class="filter-btn" onclick="filterActivities('indoor', this)">🏛 Indoor</button>
+      <button class="filter-btn" onclick="filterActivities('free', this)">✅ Free</button>
+    </div>
+
+    <div class="activity-list" id="activity-list">
+
+      <div class="activity-card" data-tags="outdoor kids free">
+        <div class="activity-emoji">🏰</div>
+        <div class="activity-body">
+          <div class="activity-name">Old Town & Castle Square</div>
+          <div class="activity-polish">Stare Miasto · Plac Zamkowy</div>
+          <div class="activity-desc">Warsaw's UNESCO-listed Old Town was rebuilt stone-by-stone after WWII and is stunning. Start at Castle Square with the Sigismund's Column, stroll colourful Market Square, feed pigeons, and let the little one run across the cobblestones. Totally flat and manageable with a buggy.</div>
+          <div class="activity-meta">
+            <span class="tag kids">👶 Toddler loves it</span>
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+            <span class="activity-info">📍 10 min walk from Centrum metro · Always open</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="indoor kids">
+        <div class="activity-emoji">🔭</div>
+        <div class="activity-body">
+          <div class="activity-name">Copernicus Science Centre</div>
+          <div class="activity-polish">Centrum Nauki Kopernik</div>
+          <div class="activity-desc">Warsaw's best hands-on museum — hundreds of interactive exhibits across physics, biology, and technology. Many are accessible to 3-year-olds (water tables, light experiments, giant pendulums). <strong>Book online</strong> — it sells out. Free on Tuesdays (check for time-slot availability). The attached planetarium is worth adding.</div>
+          <div class="activity-meta">
+            <span class="tag kids">👶 Toddler loves it</span>
+            <span class="tag indoor">Indoor</span>
+            <span class="tag book">📲 Book ahead</span>
+            <span class="tag highlight">⭐ Don't miss</span>
+          </div>
+          <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+            <span class="activity-info">Tue–Sun 10:00–20:00 · Closed Mon</span>
+            <span class="activity-price">Adult 31–33 PLN · Child 21–22 PLN · Under 3: FREE · Tue: FREE</span>
+          </div>
+          <div class="activity-warn" style="margin-top:4px;">⚠ Go at opening (10am) or after 11am — peak time is a scrum for toddlers</div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="outdoor kids free">
+        <div class="activity-emoji">🦚</div>
+        <div class="activity-body">
+          <div class="activity-name">Łazienki Royal Park</div>
+          <div class="activity-polish">Łazienki Królewskie</div>
+          <div class="activity-desc">Warsaw's most beautiful park — 76 hectares of gardens, a lake-side palace, and wild peacocks roaming freely. Kids go nuts for the peacocks, squirrels, and ducks. Multiple playgrounds, wide paths, and easy bus access. <strong>Chopin concerts every Sunday</strong> under the monument (noon & 4 pm, May–September) — free and magical.</div>
+          <div class="activity-meta">
+            <span class="tag kids">👶 Toddler loves it</span>
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free entry</span>
+            <span class="tag highlight">⭐ Sunday concert!</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="activity-info">📍 Bus 116 or 180 from Castle Square · 10 min · Open dawn–dusk</span>
+          </div>
+          <div class="activity-info" style="margin-top:4px;">🎹 Sunday May 10 — Chopin concert at noon &amp; 4 pm — perfect timing!</div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="outdoor kids">
+        <div class="activity-emoji">🦁</div>
+        <div class="activity-body">
+          <div class="activity-name">Warsaw Zoo</div>
+          <div class="activity-polish">Ogród Zoologiczny</div>
+          <div class="activity-desc">One of Europe's most affordable and well-regarded zoos — 40 hectares, 12,000+ animals including polar bears, giraffes, and sloths. Very buggy-friendly paths. The recently renovated elephant house and tropical butterfly house are absolute hits. Pack a picnic lunch. Allow 3–4 hours minimum.</div>
+          <div class="activity-meta">
+            <span class="tag kids">👶 Toddler loves it</span>
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag highlight">⭐ Don't miss</span>
+          </div>
+          <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+            <span class="activity-info">📍 Tram 4 or 26 to Zoo stop · Right bank of Vistula (Praga)</span>
+            <span class="activity-price">Adult 60 PLN · Child (3+) 35 PLN · Under 3: only 1 PLN 🎉</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="outdoor free">
+        <div class="activity-emoji">⛲</div>
+        <div class="activity-body">
+          <div class="activity-name">Multimedia Fountain Park</div>
+          <div class="activity-polish">Park Fontann</div>
+          <div class="activity-desc">A huge outdoor fountain park near the Old Town with dramatic water, light and music shows on weekend evenings (May–Sep, from 8:30 pm). During the day it's a pleasant free space to wander and splash. Evening shows are spectacular and toddlers who can stay up love them.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="activity-info">📍 Walking distance from Old Town · Evening shows Fri–Sun from 20:30</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="outdoor free">
+        <div class="activity-emoji">🌊</div>
+        <div class="activity-body">
+          <div class="activity-name">Vistula Riverfront</div>
+          <div class="activity-polish">Bulwary Wiślane</div>
+          <div class="activity-desc">Warsaw's gorgeous riverside promenade stretching several kilometres. Street food, cafés on boats, pop-up bars, kids playing, and a relaxed local vibe. Great for a long stroll with the buggy, especially on warm May evenings. The Left Bank (below Old Town) is the liveliest stretch.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+            <span class="tag kids">👶 Easy with stroller</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="activity-info">📍 Walk down from Old Town (5 min) · Along ul. Wybrzeże Kościuszkowskie</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="indoor">
+        <div class="activity-emoji">🏛</div>
+        <div class="activity-body">
+          <div class="activity-name">POLIN Museum of the History of Polish Jews</div>
+          <div class="activity-polish">Muzeum Historii Żydów Polskich POLIN</div>
+          <div class="activity-desc">One of Europe's finest history museums — immersive, beautifully designed, and deeply moving. Best for parents during toddler nap time (if you have a carrier) or on a day when your little one is in good spirits and you have another adult to tag-team. The modern architecture alone is worth a look.</div>
+          <div class="activity-meta">
+            <span class="tag indoor">Indoor</span>
+            <span class="tag highlight">⭐ Award-winning</span>
+          </div>
+          <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+            <span class="activity-info">Mon, Thu 10:00–18:00 · Wed, Fri 10:00–20:00 · Sat–Sun 10:00–18:00 · Closed Tue</span>
+            <span class="activity-price">Adult 35 PLN · Under 7: FREE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="indoor outdoor">
+        <div class="activity-emoji">🏙</div>
+        <div class="activity-body">
+          <div class="activity-name">Palace of Culture &amp; Science</div>
+          <div class="activity-polish">Pałac Kultury i Nauki (PKiN)</div>
+          <div class="activity-desc">Warsaw's iconic Stalinist skyscraper and love-hate symbol. Take the lift to the observation deck on the 30th floor for panoramic city views. The surrounding area (Centrum) is a lively urban hub with shopping, cafés, and the main railway station. The building itself is free to look at — observation deck has a fee.</div>
+          <div class="activity-meta">
+            <span class="tag indoor">Indoor</span>
+            <span class="tag outdoor">Outdoor views</span>
+          </div>
+          <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+            <span class="activity-info">📍 Plac Defilad 1 · Metro Centrum · Observation deck daily 10:00–20:00</span>
+            <span class="activity-price">Adult 30 PLN · Child 20 PLN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="indoor">
+        <div class="activity-emoji">⚔️</div>
+        <div class="activity-body">
+          <div class="activity-name">Warsaw Rising Museum</div>
+          <div class="activity-polish">Muzeum Powstania Warszawskiego</div>
+          <div class="activity-desc">A powerful, immersive museum dedicated to the 1944 Warsaw Uprising. One of the best war museums in Europe — the emotional impact is extraordinary. Not tailored for toddlers content-wise, but very stroller-accessible. Best visited by parents in shifts if the little one needs attention. Allow 2–3 hours.</div>
+          <div class="activity-meta">
+            <span class="tag indoor">Indoor</span>
+          </div>
+          <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+            <span class="activity-info">Mon, Wed, Fri 8:00–18:00 · Thu 8:00–20:00 · Sat–Sun 10:00–18:00 · Closed Tue</span>
+            <span class="activity-price">Adult 30 PLN · Child 20 PLN · Free on Sundays!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card" data-tags="outdoor kids free">
+        <div class="activity-emoji">🏘</div>
+        <div class="activity-body">
+          <div class="activity-name">Praga District</div>
+          <div class="activity-polish">Praga</div>
+          <div class="activity-desc">Warsaw's hip right-bank neighbourhood — one of the few areas that survived WWII relatively intact. Peeling Art Nouveau facades, street art, independent cafés, and the famous Bazar Różyckiego market. A lovely half-day wander; very different vibe from the left bank. Home to the Zoo too.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="activity-info">📍 Tram 4, 26 or metro M2 to Dworzec Wileński</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── PARKS & PLAY ────────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-parks">
+    <p class="section-title">Parks, Playgrounds &amp; Outdoor Play</p>
+    <p class="section-sub">Warsaw has excellent green spaces — all free, all stroller-friendly, and most have dedicated toddler play zones.</p>
+
+    <div class="activity-list">
+
+      <div class="activity-card">
+        <div class="activity-emoji">🦚</div>
+        <div class="activity-body">
+          <div class="activity-name">Łazienki Royal Park</div>
+          <div class="activity-polish">Łazienki Królewskie</div>
+          <div class="activity-desc">The crown jewel. 76 hectares of parkland with a lake-side neo-classical palace, rose garden, an open-air amphitheatre, and roaming peacocks. There are playgrounds with age-segmented areas — the toddler section is excellent. Wide, flat paths throughout. On Sundays in May: free Chopin concerts at the monument (noon &amp; 4 pm).</div>
+          <div class="activity-meta">
+            <span class="tag kids">👶 Top pick</span>
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+            <span class="tag highlight">⭐ Chopin Sun May 10</span>
+          </div>
+          <div style="margin-top:8px;"><span class="activity-info">📍 Bus 116, 180 from Plac Zamkowy · 10 min</span></div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🌳</div>
+        <div class="activity-body">
+          <div class="activity-name">Saxon Garden</div>
+          <div class="activity-polish">Ogród Saski</div>
+          <div class="activity-desc">Warsaw's oldest public park, right in the city centre. Formal French-style garden with fountains, sculptures, and shaded alleys. The fountain area is a classic meeting point and great for a stroll between Old Town and Centrum. Tomb of the Unknown Soldier is here. Small playground nearby.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+            <span class="tag kids">👶 Easy stroller walk</span>
+          </div>
+          <div style="margin-top:8px;"><span class="activity-info">📍 Plac Piłsudskiego · 10 min walk from Old Town</span></div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🌊</div>
+        <div class="activity-body">
+          <div class="activity-name">Vistula Beach &amp; Riverfront Play</div>
+          <div class="activity-polish">Plaża Miejska · Bulwary Wiślane</div>
+          <div class="activity-desc">In summer the city opens pop-up sand beaches on the Vistula bank. In May it's quieter but the promenade is lovely — kids can splash in spray fountains along the bulwary. Sand castle potential near the beach area (Plaża Saska) on the right bank. Long flat promenade perfect for scooters and buggies.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+            <span class="tag kids">👶 Splash &amp; run</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🌼</div>
+        <div class="activity-body">
+          <div class="activity-name">Pole Mokotowskie Park</div>
+          <div class="activity-polish">Park Pole Mokotowskie</div>
+          <div class="activity-desc">A huge open park in south Warsaw — popular with local families for picnics, kite-flying, and cycling. Great playground, a small pond, and food stalls on weekends. Less touristy than Łazienki; gives you a feel for everyday Warsaw life. Take the metro or tram.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag free">Free</span>
+            <span class="tag kids">👶 Playground + picnic</span>
+          </div>
+          <div style="margin-top:8px;"><span class="activity-info">📍 Metro M1 Pole Mokotowskie · or tram 17 to Batorego</span></div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🧱</div>
+        <div class="activity-body">
+          <div class="activity-name">Klockownia — Block Play Centre</div>
+          <div class="activity-polish">Klockownia</div>
+          <div class="activity-desc">An indoor play space specifically designed around building blocks and construction for preschool-age children. DUPLO, wooden blocks, foam bricks — this is 3-year-old heaven. Perfect for a half-day when energy is high and outdoor weather is iffy. Calm and educational; not the chaos of a trampoline park.</div>
+          <div class="activity-meta">
+            <span class="tag kids">👶 Perfect for 3yo</span>
+            <span class="tag indoor">Indoor</span>
+          </div>
+          <div style="margin-top:8px;"><span class="activity-price">Entry approx. 35–40 PLN/child · parents usually free</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── RAINY DAY ───────────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-rainy">
+    <p class="section-title">Rainy Day Plan</p>
+    <p class="section-sub">May in Warsaw can surprise you with showers. Here's a full menu of indoor options — all excellent with a 3-year-old.</p>
+
+    <div class="tip-box" style="margin-bottom:24px;">
+      <div class="tip-icon">🌧</div>
+      <div class="tip-content">
+        <h4>Rain is not a problem</h4>
+        <p>Warsaw's indoor attractions are genuinely world-class. A rainy day could be the best excuse to spend the full day at the Copernicus Science Centre — it easily fills 5–6 hours. Book tickets online the night before.</p>
+      </div>
+    </div>
+
+    <div class="rain-grid">
+
+      <div class="rain-card">
+        <div class="rain-emoji">🔭</div>
+        <div class="rain-title">Copernicus Science Centre</div>
+        <div class="rain-desc">Hundreds of hands-on exhibits across multiple floors. Water, light, biology, tech — most are accessible to curious 3-year-olds. The most complete rainy-day option in Warsaw.</div>
+        <div class="rain-note">Book online · Tue–Sun 10:00–20:00</div>
+        <div class="rain-price">Adult 31 PLN · Child 21 PLN · Free Tuesdays</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">🧱</div>
+        <div class="rain-title">Klockownia Block Play</div>
+        <div class="rain-desc">Purpose-built block construction play space for preschoolers. Calm, creative, and perfectly sized for a 3-year-old. Great for 2–3 hours of imaginative play.</div>
+        <div class="rain-note">Check ahead for current location &amp; hours</div>
+        <div class="rain-price">~35–40 PLN/child</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">🦁</div>
+        <div class="rain-title">Warsaw Zoo — Indoor Pavilions</div>
+        <div class="rain-desc">Even in rain, the zoo is doable — the tropical butterfly house, elephant building, and reptile house are fully indoors. A family poncho and wellies turn a drizzly day into a fun adventure.</div>
+        <div class="rain-note">Open daily · Arrive early</div>
+        <div class="rain-price">Adult 60 PLN · Child 35 PLN · Under 3: 1 PLN</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">🏛</div>
+        <div class="rain-title">Royal Castle</div>
+        <div class="rain-desc">The beautifully reconstructed royal residence in Old Town — gilded rooms, royal portraits, and Canaletto's famous Warsaw paintings. Good for about 90 minutes with a toddler who's in the carrier.</div>
+        <div class="rain-note">Tue–Sun 10:00–18:00 · Closed Mon</div>
+        <div class="rain-price">Adult 30 PLN · Child 20 PLN · Free on Sundays</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">🎭</div>
+        <div class="rain-title">Lalka Puppet Theatre</div>
+        <div class="rain-desc">Warsaw's beloved puppet theatre (Teatr Lalka) runs performances suitable for ages 2+. Check the schedule for May — productions are often in Polish but the visual storytelling transcends language perfectly for toddlers.</div>
+        <div class="rain-note">Check programme at teatrlalka.pl</div>
+        <div class="rain-price">Tickets from ~20–30 PLN</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">🛍</div>
+        <div class="rain-title">Złote Tarasy Mall</div>
+        <div class="rain-desc">Not glamorous, but practical — a huge central mall next to Central Station with a food court, play area, and everything you might need. Good emergency option when rain is relentless and everyone needs a break and a hot meal.</div>
+        <div class="rain-note">Daily 10:00–22:00 · Right next to Metro Centrum</div>
+        <div class="rain-price">Free entry</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">📚</div>
+        <div class="rain-title">Children's Corner Cafés</div>
+        <div class="rain-desc">Warsaw has a growing café culture with dedicated children's corners and play nooks. Look for Spółdzielnia Ogniwo or Filtry Cafe — cosy spaces where parents get good coffee and kids get toys. Perfect for a slow morning.</div>
+        <div class="rain-note">Various locations in Śródmieście &amp; Mokotów</div>
+        <div class="rain-price">Cost of drinks only</div>
+      </div>
+
+      <div class="rain-card">
+        <div class="rain-emoji">🎨</div>
+        <div class="rain-title">National Museum</div>
+        <div class="rain-desc">One of Poland's largest museums — ancient art, medieval, and modern sections. The Egyptian mummy collection is surprisingly engaging for kids. The Faras Gallery (Nubian medieval art) is unique in Europe.</div>
+        <div class="rain-note">Tue–Sun 10:00–18:00 · Free Sundays</div>
+        <div class="rain-price">Adult 25 PLN · Child 15 PLN</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── FOOD & DRINK ────────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-food">
+    <p class="section-title">Food &amp; Drink</p>
+    <p class="section-sub">Polish cuisine is hearty, flavourful, and surprisingly toddler-friendly. These are the things you must eat.</p>
+
+    <p style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; margin-bottom:16px;">Polish dishes to try</p>
+    <div class="food-grid">
+
+      <div class="food-card">
+        <div class="food-emoji">🥟</div>
+        <div class="food-name">Pierogi</div>
+        <div class="food-polish">Pierogi</div>
+        <div class="food-desc">Poland's beloved dumplings — stuffed with potato &amp; cheese (ruskie), meat, mushroom &amp; cabbage, or sweet with blueberries. Served boiled or fried. Universal toddler hit.</div>
+        <div class="food-tip">Order "ruskie" or "z kapustą i grzybami" — classic flavours</div>
+      </div>
+
+      <div class="food-card amber">
+        <div class="food-emoji">🍞</div>
+        <div class="food-name">Obwarzanek Krakowski</div>
+        <div class="food-polish">Obwarzanek</div>
+        <div class="food-desc">Ring-shaped pretzel bread sold from street stalls throughout Warsaw. Sesame, poppy seed, or salt. Cheap (2–3 PLN), filling, and kids go wild for them. Your toddler will want one at every stall.</div>
+        <div class="food-tip">Buy from street vendors around Old Town Market Square</div>
+      </div>
+
+      <div class="food-card forest">
+        <div class="food-emoji">🥣</div>
+        <div class="food-name">Żurek</div>
+        <div class="food-polish">Żurek</div>
+        <div class="food-desc">Sour rye soup served in a bread bowl with a hard-boiled egg and white sausage. One of Poland's most iconic flavours — warming, earthy, and completely unlike anything you've had. Parents will love it; adventurous toddlers might too.</div>
+        <div class="food-tip">Order at any milk bar or traditional Polish restaurant</div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-emoji">🥞</div>
+        <div class="food-name">Naleśniki</div>
+        <div class="food-polish">Naleśniki</div>
+        <div class="food-desc">Polish crepes — thin, rolled, and filled with sweet tvaroh cheese with raisins, or jam and cream. A favourite with young children and available everywhere. Great for breakfast or dessert.</div>
+        <div class="food-tip">Look for them at pierogi restaurants — Zapiecek chain is reliable</div>
+      </div>
+
+      <div class="food-card amber">
+        <div class="food-emoji">🌭</div>
+        <div class="food-name">Zapiekanka</div>
+        <div class="food-polish">Zapiekanka</div>
+        <div class="food-desc">Poland's iconic street food — a toasted baguette half with mushrooms, melted cheese, and toppings. Cheap, filling, and sold from kiosks. Think open-faced pizza. Toddlers usually approve.</div>
+        <div class="food-tip">Best from street kiosks near Plac Zbawiciela or Old Town</div>
+      </div>
+
+      <div class="food-card forest">
+        <div class="food-emoji">🍦</div>
+        <div class="food-name">Lody</div>
+        <div class="food-polish">Lody (ice cream)</div>
+        <div class="food-desc">Polish artisan ice cream is excellent — bold flavours, proper texture. Look for hand-scooped lodziarnie. Essential during any May afternoon walk. The obligatory end to every park visit.</div>
+        <div class="food-tip">Lody Rzemieślnicze stalls around Old Town and Śródmieście</div>
+      </div>
+
+    </div>
+
+    <p style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; margin-bottom:16px; margin-top:32px;">Where to eat — family-friendly picks</p>
+    <div class="restaurant-grid">
+
+      <div class="restaurant-card">
+        <div class="restaurant-type">Pierogi chain · Multiple locations</div>
+        <div class="restaurant-name">Zapiecek</div>
+        <div class="restaurant-stars">★★★★☆</div>
+        <div class="restaurant-desc">Warsaw's go-to traditional Polish restaurant chain — reliable, delicious pierogi in a cosy folk-décor setting. The children's menu is solid and staff are used to families. Several locations in Old Town and Centrum.</div>
+        <div class="restaurant-note">🥟 Must order: pierogi ruskie + naleśniki for dessert</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-type">Polish cuisine · Kids play area</div>
+        <div class="restaurant-name">Gruby Josek</div>
+        <div class="restaurant-stars">★★★★☆</div>
+        <div class="restaurant-desc">Traditional Polish food with a modern twist — and a large kids' zone with indoor and outdoor areas, sandbox, and animators on weekends. Exactly what you need when the little one runs out of patience.</div>
+        <div class="restaurant-note">🧒 Weekend animators for kids · Book ahead on weekends</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-type">Milk bar · Budget · Authentic</div>
+        <div class="restaurant-name">Bar Mleczny Familijny</div>
+        <div class="restaurant-stars">★★★★☆</div>
+        <div class="restaurant-desc">Warsaw's legendary "milk bars" are communist-era subsidised canteens that survive as beloved cheap eateries. Familijny on Nowy Świat is one of the best — a full meal for under 25 PLN. Pierogi, soups, kotlet — real Polish home cooking.</div>
+        <div class="restaurant-note">📍 Nowy Świat 39 · Cash only · Arrives early to avoid lunch queue</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-type">Restaurant + hidden play area</div>
+        <div class="restaurant-name">Der Elefant</div>
+        <div class="restaurant-stars">★★★★☆</div>
+        <div class="restaurant-desc">Elegant Polish and seasonal cuisine, with a surprisingly well-hidden first-floor play area including a slide and ball pit. Parents eat in peace; toddler disappears upstairs. One of Warsaw's best-kept family dining secrets.</div>
+        <div class="restaurant-note">🎠 Play area on 1st floor · Reservation recommended</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-type">Casual · River views</div>
+        <div class="restaurant-name">Vistula riverfront bars</div>
+        <div class="restaurant-stars">★★★★☆</div>
+        <div class="restaurant-desc">In May the Bulwary Wiślane come alive with bar boats and pop-up food stalls. Grab zapiekanka or grilled kiełbasa, sit on the grass, and watch the river. Very relaxed for families — no dress code, kids running free.</div>
+        <div class="restaurant-note">🌊 Best on a warm May evening · Mostly card payments</div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-type">Market hall · Street food · Sunday</div>
+        <div class="restaurant-name">Hala Koszyki</div>
+        <div class="restaurant-stars">★★★★☆</div>
+        <div class="restaurant-desc">A beautifully restored Art Nouveau market hall in Śródmieście with dozens of food stalls — everything from pierogi to sushi to craft beer. The hall is airy and kid-friendly; perfect for a lazy Sunday lunch when everyone wants something different.</div>
+        <div class="restaurant-note">📍 ul. Koszykowa 63 · Metro or tram to Pl. Konstytucji</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── GETTING AROUND ─────────────────────────────────────────────────── -->
+  <div class="panel" id="panel-transport">
+    <p class="section-title">Getting Around</p>
+    <p class="section-sub">No car needed — Warsaw's public transport is excellent, stroller-friendly, and very affordable.</p>
+
+    <div class="transport-grid">
+
+      <div class="transport-card">
+        <div class="transport-icon">🚇</div>
+        <div class="transport-title">Metro</div>
+        <div class="transport-desc">Two lines: M1 (north–south, red) and M2 (east–west, blue). M2 connects Centrum with Praga (Zoo) and National Stadium area. Modern, fast, lifts at every station — great with a stroller.</div>
+        <div class="transport-price">Single ticket 3.40 PLN · 20-min ticket 3.40 PLN</div>
+      </div>
+
+      <div class="transport-card amber">
+        <div class="transport-icon">🚌</div>
+        <div class="transport-title">Bus &amp; Tram</div>
+        <div class="transport-desc">Extensive network covers all attractions. Dedicated stroller spaces — you don't need to fold it. Night buses also run. Stop info on screens at every stop. Route planner: jakdojade.pl or Google Maps.</div>
+        <div class="transport-price">Same ticket as metro · Validate on board</div>
+      </div>
+
+      <div class="transport-card forest">
+        <div class="transport-icon">🎫</div>
+        <div class="transport-title">Best Ticket Options</div>
+        <div class="transport-desc">
+          <strong>24h pass: 15 PLN</strong><br>
+          <strong>72h pass: 36 PLN</strong><br>
+          <strong>90-min ticket: 4.40 PLN</strong><br>
+          Children under 4 travel free! Buy at machines at metro stations, Żabka stores, or the ZTM app.
+        </div>
+        <div class="transport-price">72h pass is best value for your trip</div>
+      </div>
+
+      <div class="transport-card">
+        <div class="transport-icon">🚖</div>
+        <div class="transport-title">Bolt / Uber</div>
+        <div class="transport-desc">Both apps work well in Warsaw. Useful for late evenings, heavy luggage days, or when your toddler is asleep in the stroller. Bolt is usually cheaper. Child seats not guaranteed — bring a lightweight travel one if needed.</div>
+        <div class="transport-price">Typical journey 15–30 PLN across the city</div>
+      </div>
+
+      <div class="transport-card amber">
+        <div class="transport-icon">🚲</div>
+        <div class="transport-title">Nextbike / Veturilo</div>
+        <div class="transport-desc">Warsaw's public bike share. Useful for adults for quick hops but not practical with a 3-year-old unless you bring a child seat. Lots of dedicated bike lanes — pleasant for parents who want to cycle alongside the buggy.</div>
+        <div class="transport-price">First 20 min free with registration</div>
+      </div>
+
+      <div class="transport-card forest">
+        <div class="transport-icon">🗺</div>
+        <div class="transport-title">Key Transport Links</div>
+        <div class="transport-desc">
+          <strong>Old Town → Łazienki:</strong> Bus 116 or 180, ~10 min<br>
+          <strong>Centrum → Zoo (Praga):</strong> Tram 4 or 26, ~15 min<br>
+          <strong>Old Town → Copernicus:</strong> Walk 10 min or tram<br>
+          <strong>Centrum → POLIN:</strong> Bus 180 or 116, ~15 min
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box forest" style="margin-top:8px;">
+      <div class="tip-icon">🧒</div>
+      <div class="tip-content">
+        <h4>Stroller tips</h4>
+        <p>All metro stations have lifts. Buses and trams have designated stroller areas — board at the middle doors, tap your ticket, park the buggy and hit the brake. Old Town streets are cobblestone — manageable but bumpy. A lightweight 3-wheel jogger stroller handles Warsaw much better than a big travel system.</p>
+      </div>
+    </div>
+
+    <div class="tip-box amber" style="margin-top:12px;">
+      <div class="tip-icon">📱</div>
+      <div class="tip-content">
+        <h4>App to download before you go</h4>
+        <p><strong>jakdojade.pl</strong> is the definitive Warsaw public transport journey planner — more accurate than Google Maps for local buses and trams. Also download <strong>ZTM Warsaw</strong> for buying tickets in-app without hunting for a machine.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.main -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════════════════ -->
+<div style="background:var(--crimson-deep); color:rgba(255,255,255,0.5); text-align:center; padding:28px 20px; font-size:12px; letter-spacing:0.3px;">
+  Warsaw Family Trip · May 6–11, 2026 · v0.1 — activities explorer
+  <br><span style="font-size:11px; opacity:0.6;">Next: build out the day-by-day itinerary</span>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════════════════════════════ -->
+<script>
+  const TABS = ['overview', 'activities', 'parks', 'rainy', 'food', 'transport'];
+
+  function showTab(id) {
+    TABS.forEach(t => {
+      const panel = document.getElementById('panel-' + t);
+      if (panel) panel.classList.toggle('active', t === id);
+    });
+    // update button states
+    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', TABS[i] === id);
+    });
+  }
+
+  function filterActivities(tag, btn) {
+    // update button states
+    document.querySelectorAll('#filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('#activity-list .activity-card').forEach(card => {
+      if (tag === 'all') {
+        card.style.display = '';
+      } else {
+        const tags = card.dataset.tags || '';
+        card.style.display = tags.includes(tag) ? '' : 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>
