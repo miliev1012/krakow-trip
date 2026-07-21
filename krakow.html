@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kraków Family Guide — May 2026</title>
+  <title>Kraków Family Guide — July 2026</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%89%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     /* ─────────────────────────────────────────────────────────────────────────
@@ -180,6 +181,7 @@
     .tag.free      { background:var(--forest-pale); color:var(--forest); border:1px solid rgba(45,90,61,0.25); }
     .tag.book      { background:var(--purple-pale); color:var(--purple-deep); border:1px solid rgba(92,46,138,0.2); }
     .tag.highlight { background:var(--amber-pale); color:var(--amber-deep); border:1px solid rgba(192,138,0,0.3); }
+    .tag.warn      { background:#fdeeea; color:#a03020; border:1px solid #f0c0b0; }
 
     /* ── FILTER BAR ── */
     .filter-bar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
@@ -261,32 +263,43 @@
     <div class="hero-tag">📍 Kraków · Poland</div>
     <h1>Kraków with the <em>Family</em></h1>
     <p style="font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:520px;line-height:1.65;margin-top:8px;">
-      Poland's royal capital — compact, walkable, and full of dragons. Two adults and a 3-year-old, no car needed.
+      Poland's royal capital — compact, walkable, and full of dragons. Two adults and a 3.5-year-old, no car needed. A chill trip, not a checklist.
     </p>
     <div class="hero-meta">
-      <span>May 6–10, 2026 · 4 nights</span>
-      <span>Adults × 2 · Toddler 3yo</span>
-      <span>No car — on foot + tram</span>
-      <span>~15–20°C · Gorgeous in May</span>
+      <span>Wed 29 Jul – Sun 2 Aug 2026 · 4 nights</span>
+      <span>SOF → KRK 11:45 · KRK → SOF 14:20</span>
+      <span>Adults × 2 · Toddler 3.5yo</span>
+      <span>No car — on foot + tram + trains for day trips</span>
+      <span>~25–29°C · Warm summer sun</span>
     </div>
   </div>
 </div>
 
-<div class="tabs">
-  <button class="tab-btn active" onclick="showTab('overview')">🗺 Overview</button>
-  <button class="tab-btn" onclick="showTab('activities')">🏰 Sights</button>
-  <button class="tab-btn" onclick="showTab('parks')">🌿 Parks & Play</button>
-  <button class="tab-btn" onclick="showTab('rainy')">🌧 Rainy Day</button>
-  <button class="tab-btn" onclick="showTab('food')">🥟 Food & Drink</button>
-  <button class="tab-btn" onclick="showTab('transport')">🚋 Getting Around</button>
+<div class="tabs" role="tablist" aria-label="Kraków guide sections">
+  <button class="tab-btn active" id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" tabindex="0" onclick="showTab('overview')">🗺 Overview</button>
+  <button class="tab-btn" id="tab-itinerary" role="tab" aria-selected="false" aria-controls="panel-itinerary" tabindex="-1" onclick="showTab('itinerary')">🗓 Itinerary</button>
+  <button class="tab-btn" id="tab-activities" role="tab" aria-selected="false" aria-controls="panel-activities" tabindex="-1" onclick="showTab('activities')">🏰 Sights</button>
+  <button class="tab-btn" id="tab-daytrips" role="tab" aria-selected="false" aria-controls="panel-daytrips" tabindex="-1" onclick="showTab('daytrips')">🚆 Day Trips</button>
+  <button class="tab-btn" id="tab-parks" role="tab" aria-selected="false" aria-controls="panel-parks" tabindex="-1" onclick="showTab('parks')">🌿 Parks & Play</button>
+  <button class="tab-btn" id="tab-rainy" role="tab" aria-selected="false" aria-controls="panel-rainy" tabindex="-1" onclick="showTab('rainy')">🌧 Rainy Day</button>
+  <button class="tab-btn" id="tab-food" role="tab" aria-selected="false" aria-controls="panel-food" tabindex="-1" onclick="showTab('food')">🥟 Food & Drink</button>
+  <button class="tab-btn" id="tab-transport" role="tab" aria-selected="false" aria-controls="panel-transport" tabindex="-1" onclick="showTab('transport')">🚋 Getting Around</button>
 </div>
 
 <div class="main">
 
   <!-- OVERVIEW -->
-  <div class="panel active" id="panel-overview">
+  <div class="panel active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
     <p class="section-title">Trip at a Glance</p>
-    <p class="section-sub">Kraków is Poland's most beautiful city — a royal capital that survived WWII intact, with a fairy-tale Old Town your 3-year-old will love.</p>
+    <p class="section-sub">Kraków is Poland's most beautiful city — a royal capital that survived WWII intact, with a fairy-tale Old Town your 3.5-year-old will love. This guide is built for a slow, unhurried pace: pick a couple of things a day, leave room for naps and wandering.</p>
+
+    <div class="tip-box amber" style="margin-bottom:24px;">
+      <div class="tip-icon">🏨</div>
+      <div class="tip-content">
+        <h4>Accommodation — not booked yet</h4>
+        <p>Once you book, drop the name, address, booking reference, phone number, and check-in/out times here so it's all in one place on the ground. A place in or right next to the Old Town (or a short walk into Kazimierz) means you can duck back for naps without a tram ride.</p>
+      </div>
+    </div>
 
     <div class="overview-grid">
       <div class="overview-card">
@@ -298,8 +311,12 @@
         <p>Wawel Hill has a real <strong>fire-breathing dragon statue</strong> (it breathes fire every few minutes). For a 3-year-old, this is basically magic.</p>
       </div>
       <div class="overview-card">
-        <h4>Weather in May</h4>
-        <p>Typically <strong>15–20°C</strong>, sunny and gorgeous. May is arguably Kraków's best month — green, blooming, and not yet overrun by summer crowds.</p>
+        <h4>Weather in Late July</h4>
+        <p>Typically <strong>18–29°C</strong>, warm and sunny with long daylight (sunrise ~5:15, sunset ~20:45). Afternoon thunderstorms are possible — pack a light rain layer. Sunscreen and hats for the toddler, and a water bottle you refill often.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Flights</h4>
+        <p><strong>SOF → KRK</strong> Wed 29 Jul, 11:45 · <strong>KRK → SOF</strong> Sun 2 Aug, 14:20. Both direct — no transfers with a toddler in tow.</p>
       </div>
       <div class="overview-card">
         <h4>Compactness</h4>
@@ -332,10 +349,10 @@
     </div>
 
     <div class="tip-box forest">
-      <div class="tip-icon">🌼</div>
+      <div class="tip-icon">☀️</div>
       <div class="tip-content">
-        <h4>May is peak bloom</h4>
-        <p>The Planty gardens and Błonia meadow are at their most beautiful in May. The city puts on a series of festivals — check what's on during your dates (Dragon Parade usually happens in late May, but there may be related events). Crowds are manageable compared to July–August.</p>
+        <h4>Late July is peak season, but Kraków handles it well</h4>
+        <p>Expect more visitors than shoulder season, but the Old Town's size absorbs it fine. Long daylight (light until nearly 9pm) means you can space activities around a midday nap without losing the evening. Book Wieliczka and Wawel interiors ahead — they sell out faster in summer.</p>
       </div>
     </div>
 
@@ -369,17 +386,180 @@
     </div>
   </div>
 
+  <!-- ITINERARY -->
+  <div class="panel" id="panel-itinerary" role="tabpanel" aria-labelledby="tab-itinerary" tabindex="0">
+    <p class="section-title">Day-by-Day (Loose)</p>
+    <p class="section-sub">A skeleton, not a schedule. One anchor activity per day, everything else optional — leave room for naps, wandering, and changing your mind.</p>
+
+    <div class="activity-list" style="margin-bottom:32px;">
+
+      <div class="activity-card">
+        <div class="activity-emoji">✈️</div>
+        <div class="activity-body">
+          <div class="activity-name">Wed 29 Jul — Arrival</div>
+          <div class="activity-desc">Land early-mid afternoon (SOF departs 11:45, ~2hr flight, Poland is 1hr behind Bulgaria). Transfer, drop bags, no agenda. If everyone's up for it: a short first walk to the Market Square for dinner and a gentle introduction to the Rynek. If not, an early night is the better call — you've got 4 more days.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🏛</div>
+        <div class="activity-body">
+          <div class="activity-name">Thu 30 Jul — Old Town</div>
+          <div class="activity-desc">Morning: Market Square, St. Mary's Basilica trumpet call, Cloth Hall market. Midday: back for nap. Afternoon: Planty park loop, playground stop. Evening: dinner in the Old Town.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🐉</div>
+        <div class="activity-body">
+          <div class="activity-name">Fri 31 Jul — Wawel & Kazimierz</div>
+          <div class="activity-desc">Morning: Wawel Hill, Dragon's Den, the fire-breathing dragon. Riverside walk down to Kazimierz for lunch. Midday: nap/rest. Evening: Kazimierz café or Plac Nowy zapiekanka, slow wander through Szeroka Street.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🚆</div>
+        <div class="activity-body">
+          <div class="activity-name">Sat 1 Aug — The one day trip</div>
+          <div class="activity-desc">Pick exactly one from the Day Trips tab — Tyniec (easiest) or Wieliczka (if you want the salt mine and haven't done it as a rainy-day swap) are the best fit for a single toddler-paced excursion. Back in Kraków by early evening with energy left for a relaxed dinner.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🧳</div>
+        <div class="activity-body">
+          <div class="activity-name">Sun 2 Aug — Departure</div>
+          <div class="activity-desc">Flight is 14:20, so mornings are tight but not rushed. A last obwarzanek and coffee near the Square, or anything left on the list from Day 2/3 that got skipped, then head to the airport by ~12:00.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="section-title" style="margin-top:8px;">Book Ahead</p>
+    <p class="section-sub">A handful of things sell out in late-July high season — worth reserving before you land.</p>
+    <div class="overview-grid" style="margin-bottom:32px;">
+      <div class="overview-card">
+        <h4>Accommodation</h4>
+        <p>Not booked yet — do this first, everything else in this list is easier to plan once you know where you're staying.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Wieliczka Salt Mine</h4>
+        <p>Book online at bilety.kopalnia.pl — the standard route or Solilandia (Gnomes' family route) need separate bookings, and on-site tickets often sell out by midday in summer.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Wawel Royal Chambers</h4>
+        <p>Timed-entry tickets, sells out on busy days. Book at bilety.wawel.krakow.pl if you want the interior.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Schindler's Factory Museum</h4>
+        <p>If doing this (adults only, during a nap), book ahead — it regularly sells out same-day in summer.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Tyniec boat cruise</h4>
+        <p>If you go for the boat rather than the bus, reserve a spot — departures are limited to a few times a day.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Wesele & Kuchnia u Babci Maliny</h4>
+        <p>Both get busy at dinner — Wesele especially, and only serves dinner Mon–Thu. Worth a same-day or day-ahead reservation call.</p>
+      </div>
+    </div>
+
+    <p class="section-title" style="margin-top:8px;">Beat the Crowds</p>
+    <p class="section-sub">Late July is high season — these three fill up fastest.</p>
+    <div class="overview-grid" style="margin-bottom:32px;">
+      <div class="overview-card">
+        <h4>Rynek Underground</h4>
+        <p>Go right at opening or in the first hour — by midday in summer the queue for the entrance through the Cloth Hall can be long, and the underground space itself is not huge.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Wawel Hill & Chambers</h4>
+        <p>Arrive by 9:30 when it opens. By late morning in summer, Wawel Hill gets genuinely crowded with tour groups — a toddler navigating a packed courtyard is no fun for anyone.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Wieliczka Salt Mine</h4>
+        <p>Take one of the earlier English tour slots (departures run every 30 min from 9:00). On-site same-day tickets frequently sell out by midday in peak season regardless.</p>
+      </div>
+    </div>
+
+    <p class="section-title" style="margin-top:8px;">Rough Budget</p>
+    <p class="section-sub">Ballpark figures per adult, in PLN, so you can sanity-check the trip total. Prices verified 21 Jul 2026, 8 days before you fly — worth a final check right before you go since attraction prices in Kraków have been rising.</p>
+    <div style="overflow-x:auto;margin-bottom:32px;">
+      <table style="width:100%;border-collapse:collapse;background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);font-size:13px;">
+        <thead>
+          <tr style="background:var(--purple-pale);">
+            <th style="text-align:left;padding:12px 16px;color:var(--purple-deep);font-weight:700;">Item</th>
+            <th style="text-align:left;padding:12px 16px;color:var(--purple-deep);font-weight:700;">Cost (adult)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Wieliczka Salt Mine (Tourist Route)</td><td style="padding:10px 16px;">143 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Wawel Royal Chambers</td><td style="padding:10px 16px;">47 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Schindler's Factory Museum</td><td style="padding:10px 16px;">~60 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Rynek Underground Museum</td><td style="padding:10px 16px;">36 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Kraków Zoo</td><td style="padding:10px 16px;">~20 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Tyniec cruise (if boat, not bus)</td><td style="padding:10px 16px;">€40–70</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">24h transit pass</td><td style="padding:10px 16px;">~15–25 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Casual lunch, per person</td><td style="padding:10px 16px;">20–35 PLN</td></tr>
+          <tr style="border-top:1px solid var(--border);"><td style="padding:10px 16px;">Sit-down dinner, per person</td><td style="padding:10px 16px;">40–80 PLN</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="section-sub" style="margin-top:-16px;margin-bottom:32px;">Toddler note: under-4s are free on transit and often free or heavily reduced at museums/attractions — always ask.</p>
+
+    <p class="section-title">Emergency & Practical</p>
+    <p class="section-sub">Hopefully unused, but good to have on hand.</p>
+    <div class="overview-grid" style="margin-bottom:8px;">
+      <div class="overview-card">
+        <h4>Emergency number</h4>
+        <p><strong>112</strong> works anywhere in the EU, including Poland, for police/fire/ambulance — operators speak English.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Pharmacies (Apteka)</h4>
+        <p>Several around the Market Square and along Floriańska stay open late; look for a green cross sign. Staff in central Kraków pharmacies generally speak some English.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Nearest major hospital</h4>
+        <p>University Hospital (Szpital Uniwersytecki), ul. Kopernika 15–17 — about a 15-minute walk or short taxi from the Old Town, has an emergency department (SOR).</p>
+      </div>
+      <div class="overview-card">
+        <h4>Bulgarian consular contact</h4>
+        <p>No Bulgarian embassy in Kraków — nearest is the Bulgarian Embassy in Warsaw. Worth saving their number before you travel, just in case.</p>
+      </div>
+    </div>
+
+    <p class="section-title">Packing Notes</p>
+    <p class="section-sub">Late July in Kraków — warm days, occasional storms, long daylight.</p>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <h4>Weather essentials</h4>
+        <p>Sunscreen and a hat for the toddler, a light rain layer for afternoon storms, refillable water bottles — you'll be out walking a lot in the heat.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Stroller + carrier, both</h4>
+        <p>Stroller for the flat Old Town/Planty/Kazimierz walking; carrier for the Dragon's Den, salt mine, and any day trip with uneven paths.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Footwear</h4>
+        <p>Cobblestones everywhere — comfortable, broken-in shoes for the adults, not sandals for a full walking day.</p>
+      </div>
+      <div class="overview-card">
+        <h4>Cash</h4>
+        <p>Most places take cards, but small food stalls (obwarzanek carts, market stands) are easier with a bit of PLN cash on hand.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- SIGHTS -->
-  <div class="panel" id="panel-activities">
+  <div class="panel" id="panel-activities" role="tabpanel" aria-labelledby="tab-activities" tabindex="0">
     <p class="section-title">Must-See Sights</p>
     <p class="section-sub">Almost everything is walkable from the Old Town. Kraków rewards slow exploration — don't rush.</p>
 
     <div class="filter-bar" id="filter-bar">
-      <button class="filter-btn active" onclick="filterActivities('all',this)">All</button>
-      <button class="filter-btn" onclick="filterActivities('kids',this)">👶 Toddler loves it</button>
-      <button class="filter-btn" onclick="filterActivities('outdoor',this)">🌿 Outdoor</button>
-      <button class="filter-btn" onclick="filterActivities('indoor',this)">🏛 Indoor</button>
-      <button class="filter-btn" onclick="filterActivities('free',this)">✅ Free</button>
+      <button class="filter-btn active" aria-pressed="true" onclick="filterActivities('all',this)">All</button>
+      <button class="filter-btn" aria-pressed="false" onclick="filterActivities('kids',this)">👶 Toddler loves it</button>
+      <button class="filter-btn" aria-pressed="false" onclick="filterActivities('outdoor',this)">🌿 Outdoor</button>
+      <button class="filter-btn" aria-pressed="false" onclick="filterActivities('indoor',this)">🏛 Indoor</button>
+      <button class="filter-btn" aria-pressed="false" onclick="filterActivities('free',this)">✅ Free</button>
     </div>
 
     <div class="activity-list" id="activity-list">
@@ -413,7 +593,7 @@
           </div>
           <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
             <span class="activity-info">📍 10 min walk from Market Square · Dragon's Den: daily Apr–Oct</span>
-            <span class="activity-price">Courtyard free · Dragon's Den 5 PLN/person · Under 7 free</span>
+            <span class="activity-price">Courtyard free · Dragon's Den ~9 PLN/person</span>
           </div>
           <div class="activity-warn" style="margin-top:4px;">⚠ 135 steep spiral steps into the cave — stroller stays at the top. Carry the little one or use a carrier.</div>
         </div>
@@ -453,7 +633,7 @@
         <div class="activity-body">
           <div class="activity-name">Vistula Riverfront</div>
           <div class="activity-polish">Bulwary Wiślane</div>
-          <div class="activity-desc">Kraków's riverside promenade below Wawel is lovely in May — less busy than Warsaw's but charming. The path runs from the dragon statue along to Kazimierz. Cafés, kayak rentals (for parents if grandparents are on hand!), and a great view up to the castle. A natural connector between Wawel and Kazimierz.</div>
+          <div class="activity-desc">Kraków's riverside promenade below Wawel is lovely in summer — less busy than Warsaw's but charming. The path runs from the dragon statue along to Kazimierz. Cafés, kayak rentals (for parents if grandparents are on hand!), and a great view up to the castle. A natural connector between Wawel and Kazimierz.</div>
           <div class="activity-meta">
             <span class="tag outdoor">Outdoor</span>
             <span class="tag free">Free</span>
@@ -467,17 +647,17 @@
         <div class="activity-body">
           <div class="activity-name">Wieliczka Salt Mine</div>
           <div class="activity-polish">Kopalnia Soli Wieliczka</div>
-          <div class="activity-desc">A UNESCO World Heritage site 14 km from Kraków — an extraordinary underground world of salt-carved chapels, lakes, and sculptures. The standard tourist route is 3.5 km and takes ~2.5 hours. For a 3-year-old it's a lot (many stairs, dark tunnels, long tour) — consider the shorter "Gnomes' Route" designed specifically for children aged 4+. Worth it if your toddler has good stamina and you use a carrier.</div>
+          <div class="activity-desc">A UNESCO World Heritage site 14 km from Kraków — an extraordinary underground world of salt-carved chapels, lakes, and sculptures. The standard Tourist Route is 3.5 km and takes ~2.5 hours. For a 3.5-year-old it's a lot (many stairs, dark tunnels, long tour) — consider "Solilandia" (the Gnomes' family route), a shorter, story-led 2.5 km / ~2 hour route built for young children. It requires its own advance reservation, separate from the standard route.</div>
           <div class="activity-meta">
             <span class="tag indoor">Underground</span>
             <span class="tag highlight">⭐ UNESCO landmark</span>
-            <span class="tag book">📲 Book ahead</span>
+            <span class="tag book">📲 Book ahead — sells out in summer</span>
           </div>
           <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
-            <span class="activity-info">📍 Bus 304 from Kraków Główny · 30 min · Daily from 9:00</span>
-            <span class="activity-price">Adult ~89 PLN · Child ~72 PLN · Gnomes' Route shorter & cheaper</span>
+            <span class="activity-info">📍 Bus 304 from Kraków Główny · 30 min · English tours every 30 min, 9:00–15:00</span>
+            <span class="activity-price">Adult 143 PLN · Reduced (4–16) 121 PLN · Family (2+2) ~430 PLN · Under 4 free</span>
           </div>
-          <div class="activity-warn" style="margin-top:4px;">⚠ No strollers underground. Use a carrier. Minimum age for Gnomes' Route is technically 4 — assess your child.</div>
+          <div class="activity-warn" style="margin-top:4px;">⚠ No strollers underground. Use a carrier. Book Solilandia separately and well ahead — prices have risen sharply from a couple of years ago, so double-check bilety.kopalnia.pl before you go.</div>
         </div>
       </div>
 
@@ -508,7 +688,7 @@
           </div>
           <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
             <span class="activity-info">📍 Tram 18 to Salwator, then bus 134 · ~40 min from centre</span>
-            <span class="activity-price">Adult ~25 PLN · Child ~15 PLN · Under 3 free</span>
+            <span class="activity-price">Adult ~20 PLN · reduced rate for kids/students · Under 3 free (verify at krakowzoo.pl — prices shift)</span>
           </div>
         </div>
       </div>
@@ -579,8 +759,105 @@
             <span class="tag book">📲 Book ahead — sells out</span>
           </div>
           <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
-            <span class="activity-info">📍 ul. Lipowa 4, Zabłocie · Tram 3, 19, 24 · Tue–Sun 10:00–18:00 · Mon 10:00–14:00</span>
-            <span class="activity-price">Adult 32 PLN · Child 24 PLN · Mon: FREE (book anyway)</span>
+            <span class="activity-info">📍 ul. Lipowa 4, Zabłocie · Tram 3, 19, 24 · Apr–Oct: Mon 10–16, Tue–Sun 9–20 (closed 1st Tue/month)</span>
+            <span class="activity-price">Permanent exhibition ~60 PLN adult · Mon has limited free tickets (book anyway)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY TRIPS -->
+  <div class="panel" id="panel-daytrips" role="tabpanel" aria-labelledby="tab-daytrips" tabindex="0">
+    <p class="section-title">Day Trips — No Car Needed</p>
+    <p class="section-sub">You've got 4 nights, so pick at most one or two of these — the point is a chill trip, not a checklist. Everything below is reachable by train, bus, or river boat from central Kraków.</p>
+
+    <div class="tip-box amber" style="margin-bottom:24px;">
+      <div class="tip-icon">🧭</div>
+      <div class="tip-content">
+        <h4>How to think about it</h4>
+        <p>With a 3.5-year-old, one easy half-day trip plus one full slow day in the city is a nicer rhythm than two big excursions back to back. Tyniec or Niepołomice below are the gentlest options; Ojców and Zakopane ask more of everyone.</p>
+      </div>
+    </div>
+
+    <div class="activity-list">
+
+      <div class="activity-card">
+        <div class="activity-emoji">⛪</div>
+        <div class="activity-body">
+          <div class="activity-name">Tyniec Benedictine Abbey</div>
+          <div class="activity-polish">Opactwo Benedyktynów w Tyńcu</div>
+          <div class="activity-desc">A thousand-year-old Benedictine monastery perched on a limestone cliff above the Vistula, about 10 km from the Old Town. Two ways to get there: a guided sightseeing cruise from the Wawel boat harbour (a proper outing — 4 to 4.5 hours round trip including an hour at the abbey, quite relaxed for a toddler who likes boats but a bigger time and cost commitment), or the plain, cheap route — bus 112, direct and about 30–40 minutes each way. If you want low-effort and low-cost, take the bus; if the boat ride itself is the point, book the cruise. Either way: wander the courtyard and gardens, and there's a small on-site brewery/restaurant for lunch.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag kids">👶 Toddler-friendly pace</span>
+            <span class="tag highlight">⭐ Most relaxed pick</span>
+          </div>
+          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+            <span class="activity-info">📍 Cruise departs Wawel harbour ~9:45/12:30/14:30 (check current schedule) · or bus 112, ~30–40 min each way</span>
+            <span class="activity-price">Cruise ~€40–70/adult (4–4.5 hrs, guided) · Bus: regular transit fare · Abbey grounds free, small museum extra</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🦬</div>
+        <div class="activity-body">
+          <div class="activity-name">Niepołomice — Royal Castle & Bison Reserve</div>
+          <div class="activity-polish">Zamek Królewski w Niepołomicach · Ośrodek Hodowli Żubrów</div>
+          <div class="activity-desc">A quiet royal hunting town east of Kraków. The Renaissance castle has a pleasant arcaded courtyard and a family-friendly museum. The bison reserve is in Niepołomice Forest on the edge of town — worth knowing before you go: the ~70-hectare enclosure itself isn't freely walkable, sightings are from a marked perimeter trail rather than guaranteed close-up viewing, so temper toddler expectations ("maybe we'll spot one" rather than "we will definitely see bison"). Still a nice, low-crowd half day combined with the castle, and much less walking than Ojców.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag kids">👶 Gentle pace</span>
+          </div>
+          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+            <span class="activity-info">📍 Direct bus from Jubilat every ~20 min, ~50 min · or train + local bus, ~45 min combined</span>
+            <span class="activity-price">Castle entry inexpensive (check current price) · Reserve viewing along the trail is free</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">🏰</div>
+        <div class="activity-body">
+          <div class="activity-name">Ojców National Park & Pieskowa Skała Castle</div>
+          <div class="activity-polish">Ojcowski Park Narodowy</div>
+          <div class="activity-desc">Poland's smallest national park, ~30 km north — a dramatic limestone gorge with a fairy-tale Renaissance castle (Pieskowa Skała) and the famous "Hercules's Club" rock formation. Genuinely beautiful, but more demanding than Tyniec: paths are uneven in places and the best bits involve a bit of walking or a carrier for the toddler. Worth it if you want one "real nature" day and don't mind a slower pace; skip it if the family is tired by day 3.</div>
+          <div class="activity-meta">
+            <span class="tag outdoor">Outdoor</span>
+            <span class="tag warn">Moderate walking</span>
+          </div>
+          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+            <span class="activity-info">📍 Unibus minibus from Nowy Kleparz stop, every 2–3 hrs, ~35–40 min · pay driver on board</span>
+            <span class="activity-price">Park entry free · Bus ~8 PLN each way · Pieskowa Skała Castle exhibits ~11–18 PLN</span>
+          </div>
+          <div class="activity-warn" style="margin-top:4px;">⚠ Bring the carrier, not just the stroller — some paths and cave stops aren't stroller-friendly.</div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">⛏</div>
+        <div class="activity-body">
+          <div class="activity-name">Wieliczka Salt Mine (also a day trip)</div>
+          <div class="activity-polish">Kopalnia Soli Wieliczka</div>
+          <div class="activity-desc">Covered in full under Sights and Rainy Day — worth repeating here since it's technically outside the city. Easiest day trip logistically (bus 304 direct from Kraków Główny, ~30 min) and doubles as your rainy-day fallback since it's entirely underground.</div>
+          <div class="activity-meta">
+            <span class="tag indoor">Underground</span>
+            <span class="tag book">📲 Book ahead</span>
+          </div>
+          <div style="margin-top:8px;"><span class="activity-info">📍 Bus 304 from Kraków Główny · 30 min · see Sights tab for full details</span></div>
+        </div>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-emoji">⛰</div>
+        <div class="activity-body">
+          <div class="activity-name">Zakopane — probably skip this trip</div>
+          <div class="activity-polish">Zakopane</div>
+          <div class="activity-desc">Poland's mountain resort town, ~2 hours each way. Genuinely lovely, but ~4 hours of travel with a 3.5-year-old doesn't fit a chill 4-night trip. Listed only so you know it exists and can consciously rule it out rather than wonder later — save it for a trip without a toddler's nap schedule to work around.</div>
+          <div class="activity-meta">
+            <span class="tag warn">Not this trip</span>
           </div>
         </div>
       </div>
@@ -589,7 +866,7 @@
   </div>
 
   <!-- PARKS & PLAY -->
-  <div class="panel" id="panel-parks">
+  <div class="panel" id="panel-parks" role="tabpanel" aria-labelledby="tab-parks" tabindex="0">
     <p class="section-title">Parks, Playgrounds & Open Spaces</p>
     <p class="section-sub">Kraków is surprisingly green and very stroller-friendly. The whole centre is essentially a giant pedestrian zone.</p>
 
@@ -600,7 +877,7 @@
         <div class="activity-body">
           <div class="activity-name">Planty Park Ring</div>
           <div class="activity-polish">Planty</div>
-          <div class="activity-desc">The green belt encircling the entire Old Town. Multiple playgrounds along the route, plenty of benches, and beautiful May flowers. An ideal morning circuit with the buggy — combine with stops at the Market Square and Wawel along the way.</div>
+          <div class="activity-desc">The green belt encircling the entire Old Town. Multiple playgrounds along the route, plenty of benches, and beautiful summer greenery. An ideal morning circuit with the buggy — combine with stops at the Market Square and Wawel along the way.</div>
           <div class="activity-meta"><span class="tag outdoor">Outdoor</span><span class="tag free">Free</span><span class="tag kids">👶 Playgrounds en route</span></div>
         </div>
       </div>
@@ -610,7 +887,7 @@
         <div class="activity-body">
           <div class="activity-name">Błonia Meadow</div>
           <div class="activity-polish">Błonia</div>
-          <div class="activity-desc">A vast open meadow just west of the Old Town — 48 hectares of open grass, perfect for picnics and kite-flying. Kids can run without limits. In May it's vivid green and gorgeous. A 20-minute walk from the Market Square or short tram ride.</div>
+          <div class="activity-desc">A vast open meadow just west of the Old Town — 48 hectares of open grass, perfect for picnics and kite-flying. Kids can run without limits. In late July it's vivid green, sunny, and made for running around. A 20-minute walk from the Market Square or short tram ride.</div>
           <div class="activity-meta"><span class="tag outdoor">Outdoor</span><span class="tag free">Free</span><span class="tag kids">👶 Unlimited running space</span></div>
           <div style="margin-top:8px;"><span class="activity-info">📍 15 min walk west of Old Town · Tram 15 or 18 to Cracovia</span></div>
         </div>
@@ -631,7 +908,7 @@
         <div class="activity-body">
           <div class="activity-name">Vistula Riverbank Walk</div>
           <div class="activity-polish">Bulwary Wiślane</div>
-          <div class="activity-desc">From the dragon at Wawel all the way to Kazimierz — a lovely flat stroller walk along the river. In May the opposite bank is green and lush. Duck feeding spots, occasional food trucks, and beautiful castle views from below.</div>
+          <div class="activity-desc">From the dragon at Wawel all the way to Kazimierz — a lovely flat stroller walk along the river. In summer the opposite bank is green and lush. Duck feeding spots, occasional food trucks, and beautiful castle views from below.</div>
           <div class="activity-meta"><span class="tag outdoor">Outdoor</span><span class="tag free">Free</span><span class="tag kids">👶 Duck spotting!</span></div>
         </div>
       </div>
@@ -641,14 +918,14 @@
         <div class="activity-body">
           <div class="activity-name">Kraków Botanical Garden</div>
           <div class="activity-polish">Ogród Botaniczny UJ</div>
-          <div class="activity-desc">One of the oldest botanical gardens in Poland, founded in 1783 and run by the Jagiellonian University. In May it's absolutely at its best — flowering trees, tulips, rose beds, and a gorgeous palm greenhouse. Wide smooth paths make it ideal for a slow stroller morning. Toddlers love the ducks in the pond, the lily pads in the greenhouse, and the sheer variety of flowers. A peaceful, unhurried alternative to the busier sights.</div>
+          <div class="activity-desc">One of the oldest botanical gardens in Poland, founded in 1783 and run by the Jagiellonian University. In late July it's lush and full — rose beds in full bloom, and the palm greenhouse is a nice cool break from the heat. Wide smooth paths make it ideal for a slow stroller morning. Toddlers love the ducks in the pond, the lily pads in the greenhouse, and the sheer variety of flowers. A peaceful, unhurried alternative to the busier sights.</div>
           <div class="activity-meta">
             <span class="tag outdoor">Outdoor</span>
             <span class="tag free">Free on selected weekdays</span>
             <span class="tag kids">👶 Pond, ducks & greenhouse</span>
           </div>
           <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
-            <span class="activity-info">📍 ul. Kopernika 27 · 15 min walk east of Rynek · Daily 9:00–19:00 in May</span>
+            <span class="activity-info">📍 ul. Kopernika 27 · 15 min walk east of Rynek · Daily 9:00–19:00 in summer</span>
             <span class="activity-price">Adult ~10 PLN · Child ~5 PLN · Under 7 free</span>
           </div>
         </div>
@@ -673,7 +950,7 @@
   </div>
 
   <!-- RAINY DAY -->
-  <div class="panel" id="panel-rainy">
+  <div class="panel" id="panel-rainy" role="tabpanel" aria-labelledby="tab-rainy" tabindex="0">
     <p class="section-title">Rainy Day Plan</p>
     <p class="section-sub">Kraków's indoor options are fewer than Warsaw's, but still solid. The salt mine is the ultimate rainy-day escape.</p>
 
@@ -690,9 +967,9 @@
       <div class="rain-card">
         <div class="rain-emoji">⛏</div>
         <div class="rain-title">Wieliczka Salt Mine</div>
-        <div class="rain-desc">Completely underground — rain is 100% irrelevant. A truly extraordinary place. Take the Gnomes' Route for younger children — shorter, more child-friendly, with fairy-tale themed rooms carved in salt. Book in advance.</div>
-        <div class="rain-note">Book online at wieliczka-saltmine.com</div>
-        <div class="rain-price">Adult ~89 PLN · Child ~72 PLN</div>
+        <div class="rain-desc">Completely underground — rain is 100% irrelevant. A truly extraordinary place. Take Solilandia (the Gnomes' family route) for younger children — shorter, more child-friendly, with fairy-tale themed rooms carved in salt. Needs its own advance booking.</div>
+        <div class="rain-note">Book online at bilety.kopalnia.pl</div>
+        <div class="rain-price">Adult 143 PLN · Reduced 121 PLN · Family (2+2) ~430 PLN</div>
       </div>
 
       <div class="rain-card">
@@ -732,15 +1009,15 @@
         <div class="rain-title">Wawel Royal Chambers</div>
         <div class="rain-desc">The interior of the Royal Castle — state rooms, a dragon exhibition, and crown jewels. Stroller-accessible. Best visited during a shower. Buy tickets in advance; they sell out. Good for 1.5–2 hours.</div>
         <div class="rain-note">Tue–Sun from 9:00 · Book at wawel.krakow.pl</div>
-        <div class="rain-price">Adult 35 PLN · Child 25 PLN · Free Sun (limited tickets)</div>
+        <div class="rain-price">Adult 47 PLN · Reduced 35 PLN (audio guide included)</div>
       </div>
 
       <div class="rain-card">
         <div class="rain-emoji">⚔️</div>
         <div class="rain-title">Rynek Underground Museum</div>
         <div class="rain-desc">A fascinating museum directly beneath Market Square — medieval market stalls, archaeological finds, and an interactive journey through Kraków's early history. Stroller-accessible via lift. Well-presented and engaging even for non-historians. Good for about 1.5 hours; combine with a hot drink in the Cloth Hall afterwards.</div>
-        <div class="rain-note">📍 Entrance through Cloth Hall · Tue–Sun 10:00–18:00 · Free Tuesdays</div>
-        <div class="rain-price">Adult 24 PLN · Child 18 PLN · Free Tue</div>
+        <div class="rain-note">📍 Entrance through Cloth Hall · Tue 10–14 (free, limited) · Mon/Wed/Thu 10–19 · Fri–Sun 10–20</div>
+        <div class="rain-price">Adult 36 PLN · Reduced 32 PLN · Family (up to 4) 72 PLN</div>
       </div>
 
       <div class="rain-card">
@@ -756,7 +1033,7 @@
         <div class="rain-title">Dragon's Den (indoor option!)</div>
         <div class="rain-desc">The Smocza Jama cave is a real underground cave carved into Wawel Hill — and since it's inside a hill, rain is totally irrelevant. Descend 135 spiral steps into the dragon's lair, walk through the cave passage, and emerge at the fire-breathing dragon on the Vistula bank. The cave section itself takes about 20 minutes. Stroller stays at the top — carry or use a carrier for the descent.</div>
         <div class="rain-note">📍 Base of Wawel Hill · Daily Apr–Oct · Closes at dusk</div>
-        <div class="rain-price">5 PLN per person · Under 7 free</div>
+        <div class="rain-price">~9 PLN per person</div>
       </div>
 
     </div>
@@ -764,7 +1041,7 @@
 
 
   <!-- FOOD -->
-  <div class="panel" id="panel-food">
+  <div class="panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food" tabindex="0">
     <p class="section-title">Food &amp; Drink</p>
     <p class="section-sub">Kraków is a great food city — same Polish staples as Warsaw but with a slightly more artisanal, café-culture vibe, especially in Kazimierz.</p>
 
@@ -807,7 +1084,7 @@
         <div class="food-emoji">🍦</div>
         <div class="food-name">Lody (Ice Cream)</div>
         <div class="food-polish">Lody rzemieślnicze</div>
-        <div class="food-desc">Kraków's artisan ice cream scene is excellent — several great lodziarnie around the Rynek. On a May afternoon, queues form quickly. Flavours include classic śmietankowe (cream), owoce leśne (forest fruits), and seasonal specials.</div>
+        <div class="food-desc">Kraków's artisan ice cream scene is excellent — several great lodziarnie around the Rynek. On a warm summer afternoon, queues form quickly. Flavours include classic śmietankowe (cream), owoce leśne (forest fruits), and seasonal specials.</div>
         <div class="food-tip">Lody Tradycyjne on Floriańska is a local favourite</div>
       </div>
 
@@ -839,7 +1116,7 @@
         <div class="food-emoji">🍲</div>
         <div class="food-name">Bigos</div>
         <div class="food-polish">Bigos</div>
-        <div class="food-desc">Poland's legendary hunter's stew — slow-cooked sauerkraut and fresh cabbage with mixed meats, mushrooms, prunes, and spices. Rich, warming, and deeply satisfying on a cool May evening. Each cook has their own secret recipe; no two pots are the same. Order it at any traditional restaurant.</div>
+        <div class="food-desc">Poland's legendary hunter's stew — slow-cooked sauerkraut and fresh cabbage with mixed meats, mushrooms, prunes, and spices. Rich, warming, and deeply satisfying even on a warm summer evening. Each cook has their own secret recipe; no two pots are the same. Order it at any traditional restaurant.</div>
         <div class="food-tip">Order at Wesele, Polskie Smaki, or any milk bar — served with dark bread</div>
       </div>
 
@@ -848,7 +1125,7 @@
         <div class="food-name">Kiełbasa z Grilla</div>
         <div class="food-polish">Kiełbasa z Grilla</div>
         <div class="food-desc">Grilled Polish sausage — smoky, juicy, served with mustard and a crusty roll from outdoor grills at the Vistula riverfront and weekend markets. One of the most satisfying cheap street foods in Kraków. Toddlers who are past the dumpling phase will convert immediately to kiełbasa.</div>
-        <div class="food-tip">Best at the Vistula riverfront grills on warm May evenings · ~10–15 PLN</div>
+        <div class="food-tip">Best at the Vistula riverfront grills on balmy summer evenings · ~10–15 PLN</div>
       </div>
 
     </div>
@@ -869,6 +1146,7 @@
         <div style="font-weight:700;font-size:0.97rem;color:var(--ink);margin-bottom:6px;">Milkbar Tomasza</div>
         <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">Beloved milk bar on ul. Tomasza — authentic, cheap, excellent pierogi and żurek. Queue moves fast, atmosphere is no-nonsense and wonderful. Very toddler-tolerant.</div>
         <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 ul. Tomasza 24 · Cash preferred · Lunch ~20–30 PLN/person</div>
+        <div style="font-size:11.5px;color:#a03020;font-weight:600;margin-top:4px;">⚠ Closed Mondays · roughly 8:00–20:00 otherwise (hours vary by source — worth confirming)</div>
       </div>
 
       <div style="background:var(--white);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);">
@@ -876,20 +1154,22 @@
         <div style="font-weight:700;font-size:0.97rem;color:var(--ink);margin-bottom:6px;">Kuchnia u Babci Maliny</div>
         <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">One of Kraków's most beloved institutions — homestyle Polish cooking in a cosy kitchen decorated with grandma's memorabilia. Huge portions, tiny prices, and the kind of pierogi and bigos that taste like someone's grandmother made them. Often queues — absolutely worth it. Very welcoming to children.</div>
         <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 ul. Sławkowska 17 · No reservations · Lunch ~25–35 PLN/person</div>
+        <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:4px;">Open daily · Mon–Fri 11:00–21:00 · Sat–Sun 12:00–21:00</div>
       </div>
 
       <div style="background:var(--white);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);">
         <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted-light);margin-bottom:6px;font-weight:600;">Tram depot brewery · most family-friendly</div>
         <div style="font-weight:700;font-size:0.97rem;color:var(--ink);margin-bottom:6px;">Stara Zajezdnia</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">A stunning restaurant inside a converted 19th-century tram depot in Kazimierz — brick arches, original tram tracks in the floor, and their own craft brewery. Huge space with plenty of room for strollers and restless toddlers. Polish classics plus burgers and salads. One of the most atmospheric and family-tolerant restaurants in the city. Perfect for a long Saturday lunch.</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">A stunning restaurant inside a converted 19th-century tram depot in Kazimierz — brick arches, original tram tracks in the floor, and their own craft brewery. Huge space with plenty of room for strollers and restless toddlers. Polish classics plus burgers and salads. One of the most atmospheric and family-tolerant restaurants in the city.</div>
         <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 ul. św. Wawrzyńca 12, Kazimierz · Reservations recommended · Mains 40–70 PLN</div>
+        <div style="font-size:11.5px;color:#a03020;font-weight:600;margin-top:4px;">⚠ Weekday lunch closed: Mon–Fri opens 15:00 · Sat–Sun from 12:00, both to 23:00 — not a weekday lunch option</div>
       </div>
 
       <div style="background:var(--white);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);">
         <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted-light);margin-bottom:6px;font-weight:600;">Buffet salad bar · great for picky eaters</div>
         <div style="font-weight:700;font-size:0.97rem;color:var(--ink);margin-bottom:6px;">Chimera Salad Bar</div>
         <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">A Kraków institution in a vaulted cellar just off the Market Square — pay by weight at a huge buffet of salads, hot dishes, and soups. Perfect for families with a fussy toddler since everyone picks exactly what they want. Cheap, fast, and the cellar atmosphere is charming even for little ones.</div>
-        <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 ul. św. Anny 3 · Daily 9:00–22:00 · ~20–35 PLN/person</div>
+        <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 ul. św. Anny 3 · Daily ~10:00–22:00 · ~20–35 PLN/person</div>
       </div>
 
       <div style="background:var(--white);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);">
@@ -897,13 +1177,15 @@
         <div style="font-weight:700;font-size:0.97rem;color:var(--ink);margin-bottom:6px;">Wesele</div>
         <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">Themed as a traditional Polish village wedding feast — folk décor, warm lighting, and an outstanding menu of bigos, pierogi, and roast meats. One of the best traditional Polish dining experiences in Kraków, still completely relaxed about children. Reserve ahead for dinner.</div>
         <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 Rynek Główny 10 · Reservations recommended · Mains 50–80 PLN</div>
+        <div style="font-size:11.5px;color:#a03020;font-weight:600;margin-top:4px;">⚠ Mon–Thu dinner only (~17:00–22:00) · Fri–Sat 13:00–23:00 · Sun 13:00–22:00</div>
       </div>
 
       <div style="background:var(--white);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);">
         <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted-light);margin-bottom:6px;font-weight:600;">Traditional Polish · near Rynek</div>
         <div style="font-weight:700;font-size:0.97rem;color:var(--ink);margin-bottom:6px;">Restauracja Polskie Smaki</div>
         <div style="font-size:12.5px;color:var(--muted);line-height:1.55;">Classic Polish cuisine in a warm, rustic setting steps from the Market Square. Wide menu covering bigos, pierogi, kotlet schabowy, żurek — all done well. Staff experienced with families and portions are generous.</div>
-        <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 Near Rynek Główny · Book ahead at weekends</div>
+        <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:8px;">📍 ul. Św. Tomasza 5 · Book ahead at weekends</div>
+        <div style="font-size:11.5px;color:var(--forest);font-weight:500;margin-top:4px;">Open daily ~9:00–22:00</div>
       </div>
 
       <div style="background:var(--white);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border);">
@@ -917,7 +1199,7 @@
   </div>
 
   <!-- GETTING AROUND -->
-  <div class="panel" id="panel-transport">
+  <div class="panel" id="panel-transport" role="tabpanel" aria-labelledby="tab-transport" tabindex="0">
     <p class="section-title">Getting Around</p>
     <p class="section-sub">Kraków's Old Town is almost entirely pedestrianised. You'll walk far more than you ride — and that's a good thing.</p>
 
@@ -934,14 +1216,14 @@
         <div class="transport-icon">🚋</div>
         <div class="transport-title">Trams</div>
         <div class="transport-desc">Kraków's tram network covers the whole city well. No metro (unlike Warsaw). Trams have stroller space — board at middle doors. Useful for Błonia meadow, the zoo, and Wieliczka bus connection. Route planner: jakdojade.pl works for Kraków too.</div>
-        <div class="transport-price">Single ticket 4.80 PLN · 24h pass 18 PLN · 72h pass 44 PLN</div>
+        <div class="transport-price">Single (20/40/60 min) ~4.60/6.00/8.00 PLN · 24h ~15–25 PLN · 48h ~24 PLN (fares shift — check the KMK app or jakdojade.pl)</div>
       </div>
 
       <div class="transport-card forest">
         <div class="transport-icon">🎫</div>
         <div class="transport-title">Tickets</div>
         <div class="transport-desc">Buy at tram stops, Żabka convenience stores, or via the MKK app. <strong>Children under 4 travel free</strong>. Validate on board. Day passes are good value if you're going to the zoo or salt mine.</div>
-        <div class="transport-price">72h pass 44 PLN · Under 4: free!</div>
+        <div class="transport-price">Under 4: free! · Multi-day passes cheaper than singles if you're moving around a lot</div>
       </div>
 
       <div class="transport-card">
@@ -985,22 +1267,50 @@
 </div>
 
 <div style="background:var(--purple-deep);color:rgba(255,255,255,0.5);text-align:center;padding:28px 20px;font-size:12px;letter-spacing:0.3px;">
-  Kraków Family Guide · May 6–10, 2026
+  Kraków Family Guide · 29 Jul – 2 Aug 2026 · Prices &amp; hours last verified 21 Jul 2026
 </div>
 
 <script>
-  const TABS = ['overview','activities','parks','rainy','food','transport'];
+  const TABS = ['overview','itinerary','activities','daytrips','parks','rainy','food','transport'];
+
   function showTab(id) {
     TABS.forEach(t => {
-      document.getElementById('panel-'+t)?.classList.toggle('active', t===id);
-    });
-    document.querySelectorAll('.tab-btn').forEach((btn,i) => {
-      btn.classList.toggle('active', TABS[i]===id);
+      const panel = document.getElementById('panel-'+t);
+      const tab = document.getElementById('tab-'+t);
+      const isActive = t === id;
+      if (panel) panel.classList.toggle('active', isActive);
+      if (tab) {
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        tab.tabIndex = isActive ? 0 : -1;
+      }
     });
   }
+
+  // Keyboard navigation between tabs — Left/Right/Home/End, per WAI-ARIA tabs pattern
+  document.querySelector('.tabs')?.addEventListener('keydown', (e) => {
+    const currentIndex = TABS.findIndex(t => document.getElementById('tab-'+t) === document.activeElement);
+    if (currentIndex === -1) return;
+    let newIndex = null;
+    if (e.key === 'ArrowRight') newIndex = (currentIndex + 1) % TABS.length;
+    else if (e.key === 'ArrowLeft') newIndex = (currentIndex - 1 + TABS.length) % TABS.length;
+    else if (e.key === 'Home') newIndex = 0;
+    else if (e.key === 'End') newIndex = TABS.length - 1;
+    if (newIndex !== null) {
+      e.preventDefault();
+      const id = TABS[newIndex];
+      showTab(id);
+      document.getElementById('tab-'+id)?.focus();
+    }
+  });
+
   function filterActivities(tag, btn) {
-    document.querySelectorAll('#filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#filter-bar .filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     document.querySelectorAll('#activity-list .activity-card').forEach(card => {
       card.style.display = (tag==='all' || (card.dataset.tags||'').includes(tag)) ? '' : 'none';
     });
